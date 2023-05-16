@@ -93,10 +93,10 @@ for y in range(9):
         grid[y][x] = label
 
 solve_button = tk.Button(root, text="Solve", command=Solve)
-solve_button.grid(row=9, column=4, pady=10)
+solve_button.grid(row=9, column=3, pady=10)
 
 close_button = tk.Button(root, text="Close", command=zavritokno)
-close_button.grid(row=9, column=7, pady=10)
+close_button.grid(row=9, column=6, pady=10)
 
 root.mainloop()
 
