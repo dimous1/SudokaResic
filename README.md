@@ -2,10 +2,17 @@ Tento projekt je aplikace pro řešení hry Sudoku, která je oblíbenou logicko
 
 
 Funkce increment_num(x, y) zvyšuje hodnotu v matici Sudoku na pozici [y][x] o 1 modulo 10, tedy 1 až 9 se opakují a 0 se stane 1. Následně aktualizuje odpovídající popisek Label na plátně.
+
 Funkce Mozne(x, y, num) kontroluje, zda lze číslo num umístit na pozici [y][x] v matici Sudoku. Kontroluje sloupec, řádek a blok 3x3. Pokud se num v některé z těchto částí již vyskytuje, vrátí funkce False, jinak True.
+
 Funkce zavritokno() jednoduše zavře hlavní okno root pomocí metody .destroy().
+
 Funkce AnsweredSudoku() vytváří nové okno, kde jsou vyplněné čísla matici Sudoku zobrazeny pomocí Label na plátně. Dále obsahuje tlačítko "Close", které zavírá okno pomocí metody .destroy().
-Funkce Solve() řeší sudoku rekurzivně způsobem zpětného chodu. Nejprve prochází každé políčko matici Sudoku a pokud je prázdné, zkouší na něm postupně čísla od 1 do 9. Pokud najde číslo, které může být na dané pozici, umístí ho tam a volá funkci Solve() rekurzivně. Pokud se podaří sudoku vyřešit, nastaví se Sudoku na vyřešenou verzi a zavolá se funkce AnsweredSudoku(). Pokud se nepodaří najít platné číslo, vrací se funkce zpět a postupuje dál. Pokud žádné platné číslo není nalezeno, vrátí se o jednu úroveň výše a postupuje dále.
+
+Funkce Solve() řeší sudoku rekurzivně způsobem zpětného chodu. Nejprve prochází každé políčko matici Sudoku a pokud je prázdné, zkouší na něm postupně čísla od 1 do 9. Pokud najde číslo, které může být na dané pozici, umístí ho tam a volá funkci Solve() rekurzivně.
+
+ Pokud se podaří sudoku vyřešit, nastaví se Sudoku na vyřešenou verzi a zavolá se funkce AnsweredSudoku(). Pokud se nepodaří najít platné číslo, vrací se funkce zpět a postupuje dál. Pokud žádné platné číslo není nalezeno, vrátí se o jednu úroveň výše a postupuje dále.
+
 V hlavní funkci main se nejprve inicializuje matice Sudoku na prázdnou matici 9x9. Dále se vytvoří Label na plátně pro každé políčko v matici Sudoku. Tyto popisky se ukládají do proměnné grid. Dále se vytvoří tlačítka "Solve" a "Close", která spouští funkce `Solve
 
 
