@@ -96,7 +96,7 @@ solve_button = tk.Button(root, text="Solve", command=Solve)
 solve_button.grid(row=9, column=4, pady=10)
 
 close_button = tk.Button(root, text="Close", command=zavritokno)
-close_button.grid(row=9, column=5, pady=10)
+close_button.grid(row=9, column=7, pady=10)
 
 root.mainloop()
 
